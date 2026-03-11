@@ -1,5 +1,5 @@
 body{
-font-family:Arial, sans-serif;
+font-family:Arial;
 margin:0;
 background:#e5e7eb;
 text-align:center;
@@ -55,13 +55,5 @@ button:hover
 .result{
 margin-top:20px;
 font-size:20px;
-font-weight:bold;
-}
-
-.back{
-display:block;
-margin-top:15px;
-text-decoration:none;
-color:#3367d6;
 font-weight:bold;
 }
