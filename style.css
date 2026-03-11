@@ -1,45 +1,69 @@
 body{
 font-family:Arial;
 margin:0;
-background:#eef2f7;
+background:#f4f6fb;
 text-align:center;
 }
 
 .header{
 background:#3367d6;
 color:white;
-padding:30px;
+padding:40px 20px;
+}
+
+.header h1{
+margin:0;
 font-size:32px;
-font-weight:bold;
 }
 
-.container{
+.header p{
+margin-top:8px;
+opacity:0.9;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
 background:white;
-width:90%;
-max-width:420px;
-margin:60px auto;
-padding:30px;
+padding:25px;
 border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
-
-h2{
-margin-bottom:25px;
-}
-
-.tool{
-display:block;
-margin:12px 0;
-padding:14px;
-background:#3367d6;
-color:white;
 text-decoration:none;
-border-radius:8px;
-font-size:18px;
+color:black;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.tool:hover{
-background:#254db3;
-transform:scale(1.03);
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.card h2{
+margin:10px 0;
+color:#3367d6;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+}
+
+.footer{
+margin-top:40px;
+padding:20px;
+background:#111;
+color:white;
+font-size:14px;
 }
