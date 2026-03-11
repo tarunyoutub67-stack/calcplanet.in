@@ -1,59 +1,77 @@
-function emi(){
+function calculateEMI(){
 
-let P=document.getElementById("loan").value;
-let r=document.getElementById("rate").value/12/100;
-let n=document.getElementById("months").value;
+let loan = parseFloat(document.getElementById("loan").value);
+let rate = parseFloat(document.getElementById("rate").value)/12/100;
+let months = parseFloat(document.getElementById("months").value);
 
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+let emi = (loan*rate*Math.pow(1+rate,months))/(Math.pow(1+rate,months)-1);
 
-document.getElementById("result").innerHTML="Monthly EMI ₹ "+emi.toFixed(2);
-
-}
-
-function sip(){
-
-let P=document.getElementById("sip").value;
-let r=document.getElementById("rate").value/12/100;
-let n=document.getElementById("months").value;
-
-let future=P*((Math.pow(1+r,n)-1)/r)*(1+r);
-
-document.getElementById("result").innerHTML="Future Value ₹ "+future.toFixed(2);
+document.getElementById("emiResult").innerHTML =
+"Monthly EMI: ₹ "+emi.toFixed(2);
 
 }
 
-function fd(){
+function calculateSIP(){
 
-let P=document.getElementById("amount").value;
-let r=document.getElementById("rate").value/100;
-let t=document.getElementById("years").value;
+let monthly = parseFloat(document.getElementById("sip").value);
+let rate = parseFloat(document.getElementById("rate").value)/12/100;
+let months = parseFloat(document.getElementById("months").value);
 
-let A=P*(1+r*t);
+let future = monthly*((Math.pow(1+rate,months)-1)/rate)*(1+rate);
 
-document.getElementById("result").innerHTML="Maturity ₹ "+A.toFixed(2);
-
-}
-
-function compound(){
-
-let P=document.getElementById("amount").value;
-let r=document.getElementById("rate").value/100;
-let t=document.getElementById("years").value;
-
-let A=P*Math.pow((1+r),t);
-
-document.getElementById("result").innerHTML="Amount ₹ "+A.toFixed(2);
+document.getElementById("sipResult").innerHTML =
+"Future Value: ₹ "+future.toFixed(2);
 
 }
 
-function cagr(){
+function calculateFD(){
 
-let start=document.getElementById("start").value;
-let end=document.getElementById("end").value;
-let years=document.getElementById("years").value;
+let amount = parseFloat(document.getElementById("amount").value);
+let rate = parseFloat(document.getElementById("rate").value)/100;
+let years = parseFloat(document.getElementById("years").value);
 
-let cagr=(Math.pow(end/start,1/years)-1)*100;
+let maturity = amount*Math.pow((1+rate),years);
 
-document.getElementById("result").innerHTML="CAGR "+cagr.toFixed(2)+" %";
+document.getElementById("fdResult").innerHTML =
+"Maturity Amount: ₹ "+maturity.toFixed(2);
+
+}
+
+function calculateLoan(){
+
+let principal = parseFloat(document.getElementById("amount").value);
+let rate = parseFloat(document.getElementById("rate").value)/100;
+let years = parseFloat(document.getElementById("years").value);
+
+let interest = principal*rate*years;
+
+document.getElementById("loanResult").innerHTML =
+"Total Interest: ₹ "+interest.toFixed(2);
+
+}
+
+function calculateCAGR(){
+
+let start = parseFloat(document.getElementById("start").value);
+let end = parseFloat(document.getElementById("end").value);
+let years = parseFloat(document.getElementById("years").value);
+
+let cagr = (Math.pow(end/start,1/years)-1)*100;
+
+document.getElementById("cagrResult").innerHTML =
+"CAGR: "+cagr.toFixed(2)+"%";
+
+}
+
+function calculateCompound(){
+
+let amount = parseFloat(document.getElementById("amount").value);
+let rate = parseFloat(document.getElementById("rate").value)/100;
+let years = parseFloat(document.getElementById("years").value);
+
+let total = amount*Math.pow((1+rate),years);
+
+document.getElementById("compoundResult").innerHTML =
+"Total Amount: ₹ "+total.toFixed(2);
 
 }
