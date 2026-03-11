@@ -2,8 +2,11 @@
 
 <html>
 <head>
+
 <title>EMI Calculator</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -12,15 +15,15 @@
 
 <div class="container">
 
-Loan Amount <input type="number" id="loan">
+<label>Loan Amount</label> <input type="number" id="loan">
 
-Interest Rate % <input type="number" id="rate">
+<label>Interest Rate %</label> <input type="number" id="rate">
 
-Months <input type="number" id="months">
+<label>Months</label> <input type="number" id="months">
 
-<button onclick="emi()">Calculate EMI</button>
+<button onclick="calculateEMI()">Calculate EMI</button>
 
-<div class="result" id="result"></div>
+<div class="result" id="emiResult"></div>
 
 </div>
 
