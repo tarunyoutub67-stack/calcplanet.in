@@ -1,28 +1,36 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+
 <title>SIP Calculator</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>SIP Calculator</h1>
+<div class="header">SIP Calculator</div>
 
-Monthly Investment
-<input type="number" id="sipAmount">
+<div class="container">
 
-Interest Rate %
-<input type="number" id="sipRate">
+<label>Monthly Investment</label> <input type="number" id="sip">
 
-Years
-<input type="number" id="sipYears">
+<label>Interest Rate %</label> <input type="number" id="rate">
+
+<label>Months</label> <input type="number" id="months">
 
 <button onclick="calculateSIP()">Calculate</button>
 
-<p id="sipResult"></p>
+<div class="result" id="sipResult"></div>
+
+<a class="back" href="index.html">⬅ Back</a>
+
+</div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
