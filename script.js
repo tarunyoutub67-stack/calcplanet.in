@@ -1,10 +1,12 @@
 function calculateEMI(){
 
-let loan = parseFloat(document.getElementById("loan").value);
-let rate = parseFloat(document.getElementById("rate").value)/12/100;
+let P = parseFloat(document.getElementById("loan").value);
+let rate = parseFloat(document.getElementById("rate").value);
 let months = parseFloat(document.getElementById("months").value);
 
-let emi = (loan*rate*Math.pow(1+rate,months))/(Math.pow(1+rate,months)-1);
+let r = rate/12/100;
+
+let emi = (P*r*Math.pow(1+r,months))/(Math.pow(1+r,months)-1);
 
 document.getElementById("emiResult").innerHTML =
 "Monthly EMI: ₹ "+emi.toFixed(2);
@@ -13,11 +15,11 @@ document.getElementById("emiResult").innerHTML =
 
 function calculateSIP(){
 
-let monthly = parseFloat(document.getElementById("sip").value);
+let sip = parseFloat(document.getElementById("sip").value);
 let rate = parseFloat(document.getElementById("rate").value)/12/100;
 let months = parseFloat(document.getElementById("months").value);
 
-let future = monthly*((Math.pow(1+rate,months)-1)/rate)*(1+rate);
+let future = sip*((Math.pow(1+rate,months)-1)/rate)*(1+rate);
 
 document.getElementById("sipResult").innerHTML =
 "Future Value: ₹ "+future.toFixed(2);
@@ -59,7 +61,7 @@ let years = parseFloat(document.getElementById("years").value);
 let cagr = (Math.pow(end/start,1/years)-1)*100;
 
 document.getElementById("cagrResult").innerHTML =
-"CAGR: "+cagr.toFixed(2)+"%";
+"CAGR: "+cagr.toFixed(2)+" %";
 
 }
 
