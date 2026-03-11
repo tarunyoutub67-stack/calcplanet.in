@@ -1,26 +1,31 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+
 <title>CAGR Calculator</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>CAGR Calculator</h1>
+<div class="header">CAGR Calculator</div>
 
-Initial Value
-<input type="number" id="initial">
+<div class="container">
 
-Final Value
-<input type="number" id="final">
+<label>Start Value</label> <input type="number" id="start">
 
-Years
-<input type="number" id="years">
+<label>End Value</label> <input type="number" id="end">
+
+<label>Years</label> <input type="number" id="years">
 
 <button onclick="calculateCAGR()">Calculate</button>
 
-<p id="cagrResult"></p>
+<div class="result" id="cagrResult"></div>
+
+</div>
 
 <script src="script.js"></script>
 
