@@ -1,109 +1,40 @@
 body{
 font-family:Arial;
-margin:0;
-background:#f3f4f6;
+text-align:center;
+background:#f4f4f4;
 }
 
-header{
-background:#2563eb;
+h1{
+background:#333;
 color:white;
 padding:20px;
-text-align:center;
-}
-
-nav{
-margin-top:10px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 10px;
-font-weight:600;
 }
 
 .container{
-display:flex;
-justify-content:center;
-padding:40px 20px;
-}
-
-.calculator{
 background:white;
-padding:30px;
+padding:20px;
+margin:20px auto;
+width:90%;
+max-width:400px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-width:100%;
-max-width:420px;
-}
-
-.calculator h2{
-margin-top:0;
-}
-
-label{
-display:block;
-margin-top:10px;
-font-weight:600;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 input{
-width:100%;
-padding:10px;
-margin-top:5px;
-border:1px solid #ccc;
-border-radius:6px;
+padding:8px;
+margin:5px;
+width:80%;
 }
 
 button{
-width:100%;
-margin-top:15px;
-padding:12px;
-background:#2563eb;
+padding:10px;
+background:#007bff;
 color:white;
 border:none;
-border-radius:6px;
-font-size:16px;
+margin-top:10px;
 cursor:pointer;
 }
 
 button:hover{
-background:#1e40af;
-}
-
-.result{
-margin-top:15px;
-font-size:18px;
-font-weight:600;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111827;
-color:white;
-margin-top:30px;
-}
-
-/* Mobile responsive */
-
-@media(max-width:600px){
-
-header h1{
-font-size:22px;
-}
-
-nav a{
-display:block;
-margin:5px 0;
-}
-
-.container{
-padding:20px;
-}
-
-.calculator{
-padding:20px;
-}
-
+background:#0056b3;
 }
