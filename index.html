@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
-<title>All Financial Calculators</title>
+<title>Compound Interest Calculator</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,29 +13,30 @@
 
 <body>
 
-<div class="header">
+<header>
 
-<h1>All Financial Calculators In One Page</h1>
+<h1>Compound Interest Calculator</h1>
 
-<p>EMI • SIP • FD • Loan • CAGR • Compound Interest</p>
+</header>
+
+<div class="calculator">
+
+<label>Principal Amount</label>
+<input type="number" id="principal">
+
+<label>Interest Rate %</label>
+<input type="number" id="rate">
+
+<label>Years</label>
+<input type="number" id="years">
+
+<button onclick="calculateCompound()">Calculate</button>
+
+<h2 id="result"></h2>
 
 </div>
 
-<div class="container">
-
-<a href="emi-calculator.html" class="btn">EMI Calculator</a>
-
-<a href="sip-calculator.html" class="btn">SIP Calculator</a>
-
-<a href="fd-calculator.html" class="btn">FD Calculator</a>
-
-<a href="loan-calculator.html" class="btn">Loan Calculator</a>
-
-<a href="cagr-calculator.html" class="btn">CAGR Calculator</a>
-
-<a href="compound-interest.html" class="btn">Compound Interest</a>
-
-</div>
+<script src="script.js"></script>
 
 </body>
 
