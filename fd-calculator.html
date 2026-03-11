@@ -1,28 +1,36 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+
 <title>FD Calculator</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>FD Calculator</h1>
+<div class="header">FD Calculator</div>
 
-Deposit Amount
-<input type="number" id="fdAmount">
+<div class="container">
 
-Interest Rate
-<input type="number" id="fdRate">
+<label>Amount</label> <input type="number" id="amount">
 
-Years
-<input type="number" id="fdYears">
+<label>Interest Rate %</label> <input type="number" id="rate">
+
+<label>Years</label> <input type="number" id="years">
 
 <button onclick="calculateFD()">Calculate</button>
 
-<p id="fdResult"></p>
+<div class="result" id="fdResult"></div>
+
+<a class="back" href="index.html">⬅ Back</a>
+
+</div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
